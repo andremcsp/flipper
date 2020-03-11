@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+    <title>Flipper</title>
+    <script src="flipPicture.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <button class="up-down-arrows" id="up-arrow" disabled onclick="flipPicture('up')">
+      ^
+    </button>
+    <div class="inline-container">
+
+      <button class="left-right-arrows" id="left-arrow" disabled onclick="flipPicture('left')"><</button>
+
+      <div class="sliced-img">
+        <img src='./resources/images/image.jpg' class='img-responsive hidden'> <!-- This hidden image (image we want to slice) is under the two divs, it's just used to get the image height and/or the image src dynamically -->
+        <div class="slice s1" id='top-left-slice'></div>
+        <div class="slice s2" id='top-right-slice'></div>
+        <div class="slice s3" id='bottom-left-slice'></div>
+        <div class="slice s4" id='bottom-right-slice'></div>
+      </div>
+
+      <button class="left-right-arrows" id="right-arrow" disabled onclick="flipPicture('right')">></button>
+
+    </div>
+
+    <button class="up-down-arrows" id="down-arrow" disabled onclick="flipPicture('down')">v</button>
+  </body>
+</html>
